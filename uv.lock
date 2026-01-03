@@ -425,6 +425,7 @@ dependencies = [
     { name = "langchain-openai" },
     { name = "langgraph" },
     { name = "loguru" },
+    { name = "openai" },
     { name = "python-dotenv" },
     { name = "uvicorn" },
 ]
@@ -432,9 +433,10 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "fastapi", specifier = ">=0.128.0" },
-    { name = "langchain-openai", specifier = ">=1.1.6" },
-    { name = "langgraph", specifier = ">=1.0.5" },
+    { name = "langchain-openai", specifier = ">=0.2.0" },
+    { name = "langgraph", specifier = ">=0.2.0" },
     { name = "loguru", specifier = ">=0.7.3" },
+    { name = "openai", specifier = ">=2.14.0" },
     { name = "python-dotenv", specifier = ">=1.2.1" },
     { name = "uvicorn", specifier = ">=0.40.0" },
 ]

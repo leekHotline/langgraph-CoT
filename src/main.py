@@ -3,7 +3,7 @@ import dotenv
 from loguru import logger
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
-from cot.cot_agent import build_cot_graph
+from .cot.cot_agent import build_cot_graph
 import json
 
 
@@ -16,7 +16,7 @@ cot_graph = build_cot_graph()
 async def cot_api(question: str):
     async def event_stream():
         # 构建初始状态
-        state = {"收到用户问题: {question}"}
+        state = {"question": question}
 
         # 执行图
         result = cot_graph.invoke(state)
@@ -26,7 +26,7 @@ async def cot_api(question: str):
         steps = [
             ("step1", result['step1']),
             ("step2", result['step2']),
-            ("step3", result['answer'])
+            ("step3", result['step3'])
         ]
 
         for key,value in steps:
