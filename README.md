@@ -6,7 +6,7 @@ git clone https://github.com/leekHotline/langgraph-CoT.git
 pip install uv
 uv sync
 .venv\Scripts\activate
-uv run uvicorn src.main:app --reload --host 0.0.0.0 --port 8000
+uv run src.main
 ```
 #### 克隆项目 安装依赖管理工具和依赖包 进入虚拟环境 进入src目录 启动服务
 
